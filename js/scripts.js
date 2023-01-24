@@ -17,26 +17,24 @@ Ticket.prototype.TicketCost = function () {
     if (this.age === "kid" || "senior") {
         ticketPrice -= 2;
     }
-    if (this.time === afternoon) {
+    if (this.time === "afternoon") {
         ticketPrice += 1;
     }
-    else if (this.time === evening) {
+    else if (this.time === "evening") {
         ticketPrice += 3;
     }
-    let output = ticketPrice;
-    document.getElementById("result").innerText = output;
+    console.log(ticketPrice);
+    return ticketPrice;
 };
 
 //User Interface Logic
-let ticketPrice = new Ticket();
 function handleMovieTicket(event) {
     event.preventDefault();   
     const inputMovie = document.getElementById("movie-choice").value;
     const inputAge = document.getElementById("age-choice").value;
     const inputTime = document.getElementById("time-choice").value;
-    let ticketPrice = Ticket(inputMovie, inputAge, inputTime);
-    console.log(ticketPrice);
-    ticketPrice.TicketCost();
+    let ticketPrice = new Ticket(inputMovie, inputAge, inputTime);
+    document.getElementById("result").innerText = ticketPrice.TicketCost();
 };
 
 
