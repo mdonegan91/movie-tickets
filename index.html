@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/scripts.js"></script>
+    <title>Movie Tickets</title>
+</head>
+
+<body>
+    <h1>Movie Tickets</h1>
+    <form id="movie-ticket">
+        <div class="form-group">
+
+            <label for="movie-choice">Select Movie:</label><br>
+            <select id="movie-choice">
+                <option value="Avatar">Avatar</option>
+                <option value="Frozen">Frozen</option>
+                <option value="Forest Gump">Forest Gump</option>
+            </select><br><br>
+
+            <label for="age-choice">Select age-choice:</label><br>
+            <select id="age-choice">
+                <option value="kid">12 and under</option>
+                <option value="adult">12 - 60</option>
+                <option value="senior">60+</option>
+            </select><br><br>
+
+            <label for="time-choice">Select Time of Day:</label><br>
+            <select id="time-choice">
+                <option value="morning">9AM - 12PM</option>
+                <option value="afternoon">12PM - 5PM</option>
+                <option value="evening">5PM - 11PM</option>
+            </select><br><br>
+
+            <button type="submit">Submit</button><br><br>
+        </div>
+
+        <h2>Movie ticket</h2>
+        <div id="movie-ticket" class="hidden">
+            <p>Your ticket costs:<span id="result"></span></p>
+        </div>
+
+</body>
+
+</html>
